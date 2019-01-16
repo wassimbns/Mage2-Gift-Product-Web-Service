@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Product Service -->
+  
+    <route url="/V1/magento/getGiftProduct" method="POST">
+        <service class="Magento\Sync\Api\MagentoCustomerInterface" method="getGiftProduct"/>
+        <resources>
+            <resource ref="Magento_Customer::customer" />
+        </resources>
+    </route>
+
+</routes>
